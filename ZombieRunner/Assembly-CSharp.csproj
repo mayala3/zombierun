@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\EndTrigger.cs" />
      <Compile Include="Assets\Scripts\FollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\FollowPlayerAll.cs" />
      <Compile Include="Assets\Scripts\FollowZombie.cs" />
      <Compile Include="Assets\Scripts\GameManage.cs" />
      <Compile Include="Assets\Scripts\HumanCollision.cs" />
