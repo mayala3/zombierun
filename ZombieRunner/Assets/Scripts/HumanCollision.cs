@@ -6,7 +6,7 @@ public class HumanCollision : MonoBehaviour {
 
     public float delay;
 
-    void OnCollisionEnter(Collision collisionInfo)
+    /*void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Zombie" && gameObject.tag == "Human")
         {
@@ -27,5 +27,5 @@ public class HumanCollision : MonoBehaviour {
 
     void Remove() {
         Destroy(gameObject);
-    }
+    }*/
 }

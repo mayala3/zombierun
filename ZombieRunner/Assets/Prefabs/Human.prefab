@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 114063254339266712}
   - component: {fileID: 114021995151671574}
   - component: {fileID: 82063756307493442}
+  - component: {fileID: 114385808498392334}
+  - component: {fileID: 114625948759778008}
   m_Layer: 0
   m_Name: Human
   m_TagString: Human
@@ -219,3 +221,29 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -3}
   rspeed: 22
   fspeed: 25.5
+--- !u!114 &114385808498392334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304004024320782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d3f860979be1b4d9bfb532cca18da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+--- !u!114 &114625948759778008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304004024320782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c38dd8e872370345b48d877117dd1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWait: 0.5
+  spawnWait: 0.5
+  bullet: {fileID: 1592712679606532, guid: d262e10c02c24b04297a309554cdda9b, type: 2}

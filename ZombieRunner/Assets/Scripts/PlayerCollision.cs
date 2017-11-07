@@ -6,8 +6,20 @@ public class PlayerCollision : MonoBehaviour {
 
     void OnCollisionEnter(Collision collisionInfo) {
         if (collisionInfo.collider.tag == "Obstacle") {
-            movement.enabled = false;
-            FindObjectOfType<GameManage>().EndGame();
+            GameManage.zombies--;
+            transform.localScale -= new Vector3(0.3f, 0.3f, 0.3f);
+            Destroy(collisionInfo.collider.gameObject);
+            if (GameManage.zombies < 0) {
+                movement.enabled = false;
+                FindObjectOfType<GameManage>().EndGame();
+            }
+        }
+        if (collisionInfo.collider.tag == "Human") {
+            GetComponent<AudioSource>().Play();
+            GameManage.zombies++;
+            transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
+            Destroy(collisionInfo.collider.gameObject);
+            //movement.sidewaysForce;
         }
     }
 }

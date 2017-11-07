@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour {
         while (true) {
             randEnemy = Random.Range(0, obstacles.Length);
             Vector3 spawnPosition = new Vector3(xValues[Random.Range(0, 3)], 1, Random.Range(-spawnValues.z, spawnValues.z));
-            Instantiate(obstacles[randEnemy], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
+            Instantiate(obstacles[randEnemy], spawnPosition + transform.TransformPoint(0, 0, 0), obstacles[randEnemy].transform.rotation);
 
             yield return new WaitForSeconds(spawnWait);
         }

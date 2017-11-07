@@ -14,17 +14,17 @@ public class PlayerMovement : MonoBehaviour {
 
 	// FixedUpdate is called once per frame
     // Used because we are using physics
-	void Update () {
-        //rb.AddForce(0, 0, forwardForce * Time.deltaTime);       // adds a forward force
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.5f);
+	void FixedUpdate () {
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime);       // adds a forward force
+        //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.5f);
 
-        /*if (Input.GetKey("d")) {
+        if (Input.GetKey("d")) {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKey("a")) {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-        }*/
-        if (Input.GetKeyDown("d") && transform.position.x < 4f)
+        }
+        /*if (Input.GetKeyDown("d") && transform.position.x < 4f)
         {
             Debug.Log("Right");
             //rb.AddForce (sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             Debug.Log("Left");
             transform.position = new Vector3(transform.position.x - 5f, transform.position.y, transform.position.z);
-        }
+        }*/
 
         if (Input.GetKeyDown("space"))
         {
